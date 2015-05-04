@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Monitor Class Mappings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class name</th>
+      <th>Sub string</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monitor_class_mappings.each do |monitor_class_mapping| %>
+      <tr>
+        <td><%= monitor_class_mapping.class_name %></td>
+        <td><%= monitor_class_mapping.sub_string %></td>
+        <td><%= link_to 'Show', monitor_class_mapping %></td>
+        <td><%= link_to 'Edit', edit_monitor_class_mapping_path(monitor_class_mapping) %></td>
+        <td><%= link_to 'Destroy', monitor_class_mapping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Monitor class mapping', new_monitor_class_mapping_path %>

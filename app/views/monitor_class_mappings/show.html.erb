@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @monitor_class_mapping.class_name %>
+</p>
+
+<p>
+  <strong>Sub string:</strong>
+  <%= @monitor_class_mapping.sub_string %>
+</p>
+
+<%= link_to 'Edit', edit_monitor_class_mapping_path(@monitor_class_mapping) %> |
+<%= link_to 'Back', monitor_class_mappings_path %>

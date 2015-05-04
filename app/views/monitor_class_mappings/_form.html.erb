@@ -1,0 +1,25 @@
+<%= form_for(@monitor_class_mapping) do |f| %>
+  <% if @monitor_class_mapping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@monitor_class_mapping.errors.count, "error") %> prohibited this monitor_class_mapping from being saved:</h2>
+
+      <ul>
+      <% @monitor_class_mapping.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :class_name %><br>
+    <%= f.text_field :class_name %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_string %><br>
+    <%= f.text_field :sub_string %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
